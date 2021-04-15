@@ -1,0 +1,48 @@
+#container-content-estudios {
+  grid-area: content;
+
+  .content-estudios {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    .estudios {
+      display: flex;
+      width: 35%;
+      flex-direction: column;
+      color: #fff;
+      margin-left: 5.5rem;
+      margin-top: 2rem;
+
+      .tittle {
+        font-size: 3rem;
+        font-family: "Anton", sans-serif;
+      }
+
+      .university {
+        font-size: 1.2rem;
+        font-family: "Courgette", cursive;
+        border-bottom: 1px solid #fff;
+
+        a {
+          color: #fff;
+          text-decoration: none;
+
+          &:hover {
+            color: rgb(192, 233, 146);
+          }
+        }
+      }
+      .date {
+        font-size: 1rem;
+        font-family: "Anton", sans-serif;
+        text-align: end;
+        margin-top: 0.2rem;
+      }
+    }
+  }
+}

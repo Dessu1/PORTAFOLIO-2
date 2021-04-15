@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+
+#container-content-home {
+  grid-area: content;
+
+  .content-home {
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-areas: "left right";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+
+    .content-left {
+      grid-area: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: -4rem;
+
+      span {
+        margin-left: 5.5rem;
+        color: #fff;
+        z-index: 2;
+
+        &:nth-child(1) {
+          font-size: 3.2rem;
+          font-family: "Anton", sans-serif;
+        }
+        &:nth-child(2) {
+          font-size: 1.2rem;
+          font-family: "Courgette", cursive;
+        }
+      }
+
+      button {
+        z-index: 2;
+        width: 7rem;
+        height: 2.5rem;
+        margin-left: 5.5rem;
+        margin-top: 1rem;
+        background: rgba(201, 62, 62, 0.6);
+        border: none;
+        color: #fff;
+        font-family: "Anton", sans-serif;
+        border-radius: 0.3rem;
+        letter-spacing: 0.15rem;
+        cursor: pointer;
+
+        &:hover {
+          background: rgba($color: rgb(192, 233, 146), $alpha: 0.6);
+        }
+      }
+    }
+
+    .content-right {
+      grid-area: right;
+
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: -20%;
+      margin-left: -30%;
+
+      .tittle {
+        text-align: center;
+        color: #fff;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        border-bottom: 1px solid #fff;
+      }
+
+      .icons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .row {
+          height: auto;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          margin: 1rem 0;
+
+          svg {
+            margin: 0 2rem;
+            font-size: 3rem;
+            color: rgba($color: #ffff, $alpha: 0.3);
+            cursor: pointer;
+
+            &:hover {
+              color: rgba($color: rgb(192, 233, 146), $alpha: 0.6);
+              animation: icons 1s;
+
+              @keyframes icons {
+                0% {
+                  transform: translateY(-1px);
+                }
+                50% {
+                  transform: translateY(-10px);
+                }
+                100% {
+                  transform: translateY(0px);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
