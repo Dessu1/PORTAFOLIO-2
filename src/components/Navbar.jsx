@@ -6,16 +6,24 @@ const Navbar = () => {
     <div id='container-navbar'>
       <nav className='navbar'>
         <li>
-          <NavLink to='home'>Home</NavLink>
+          <NavLink to='home' activeClassName='active'>
+            Home
+          </NavLink>
         </li>
         <li>
-          <NavLink to='estudios'>Estudios</NavLink>
+          <NavLink to='estudios' activeClassName='active'>
+            Estudios
+          </NavLink>
         </li>
         <li>
-          <NavLink to='habilidades'>Habilidades</NavLink>
+          <NavLink to='habilidades' activeClassName='active'>
+            Habilidades
+          </NavLink>
         </li>
         <li>
-          <NavLink to='contactame'>Contactame</NavLink>
+          <NavLink to='contactame' activeClassName='active'>
+            Contactame
+          </NavLink>
         </li>
       </nav>
     </div>

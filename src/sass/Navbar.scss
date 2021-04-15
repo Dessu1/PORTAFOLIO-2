@@ -13,6 +13,11 @@
     align-items: center;
     justify-content: flex-end;
 
+    .active {
+      border-bottom: 1px solid rgb(192, 233, 146);
+      color: rgb(192, 233, 146);
+    }
+
     a {
       color: #fff;
       text-decoration: none;

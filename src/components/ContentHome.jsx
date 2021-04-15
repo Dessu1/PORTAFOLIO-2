@@ -10,6 +10,7 @@ import {
 import { DiJavascript1 } from "react-icons/di";
 import { SiFirebase, SiRedux } from "react-icons/si";
 import { ImGit } from "react-icons/im";
+import { NavLink, withRouter } from "react-router-dom";
 
 const ContentHome = () => {
   return (
@@ -19,28 +20,28 @@ const ContentHome = () => {
           <span>Brian Stiven Alvarado</span>
           <span>Front-end Developer</span>
 
-          <button>Sobre mi</button>
+          <NavLink to='/estudios'>Sobre mi</NavLink>
         </div>
         <div className='content-right'>
           <h2 className='tittle'>Conocimientos</h2>
           <div className='icons'>
             <div className='row'>
-              <FaHtml5 />
-              <FaCss3Alt />
-              <FaSass />
-              <FaPython />
+              <FaHtml5 title='HTML 5' />
+              <FaCss3Alt title='CSS 3' />
+              <FaSass title='SASS' />
+              <FaPython title='PYTHON' />
             </div>
             <div className='row'>
-              <DiJavascript1 />
-              <FaReact />
-              <SiFirebase />
+              <DiJavascript1 title='JAVASCRIPT' />
+              <FaReact title='REACT JS' />
+              <SiFirebase title='FIREBASE' />
             </div>
             <div className='row'>
-              <FaNodeJs />
-              <ImGit />
+              <FaNodeJs title='NODE JS' />
+              <ImGit title='GIT' />
             </div>
             <div className='row'>
-              <SiRedux />
+              <SiRedux title='REDUX' />
             </div>
           </div>
         </div>
@@ -49,4 +50,4 @@ const ContentHome = () => {
   );
 };
 
-export default ContentHome;
+export default withRouter(ContentHome);

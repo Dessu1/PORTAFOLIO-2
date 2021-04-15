@@ -4,16 +4,16 @@
 @import "./sass/AsideMenu.scss";
 @import "./sass/ContentHome.scss";
 @import "./sass/ContentEstudios.scss";
+@import "./sass/ContentHabilidades.scss";
 
-html,
-body {
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
   font-family: "Rubik", sans-serif;
-  margin: 0;
-  padding: 0;
 }
 
 #container-principal {
@@ -30,4 +30,10 @@ body {
   grid-template-areas:
     "navbar navbar"
     "content aside-menu";
+
+  .container-chika {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
 }

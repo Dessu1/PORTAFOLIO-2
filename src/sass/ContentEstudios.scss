@@ -2,46 +2,127 @@
   grid-area: content;
 
   .content-estudios {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    grid-template-areas: "left right";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
 
     width: 100%;
     height: 100%;
 
-    .estudios {
+    .content-left {
+      grid-area: left;
       display: flex;
-      width: 35%;
       flex-direction: column;
-      color: #fff;
-      margin-left: 5.5rem;
-      margin-top: 2rem;
+      justify-content: center;
+      align-items: flex-start;
+      width: 100%;
 
-      .tittle {
-        font-size: 3rem;
-        font-family: "Anton", sans-serif;
-      }
+      .estudios {
+        display: flex;
+        width: 65%;
+        flex-direction: column;
+        color: #fff;
+        margin-left: 5.5rem;
+        margin-top: 2rem;
 
-      .university {
-        font-size: 1.2rem;
-        font-family: "Courgette", cursive;
-        border-bottom: 1px solid #fff;
+        .tittle {
+          font-size: 2.5rem;
+          font-family: "Anton", sans-serif;
+        }
 
-        a {
-          color: #fff;
-          text-decoration: none;
+        .university {
+          font-size: 1.2rem;
+          font-family: "Courgette", cursive;
+          border-bottom: 1px solid #fff;
 
-          &:hover {
-            color: rgb(192, 233, 146);
+          a {
+            color: #fff;
+            text-decoration: none;
+
+            &:hover {
+              color: rgb(192, 233, 146);
+            }
           }
         }
+        .date {
+          font-size: 1rem;
+          font-family: "Anton", sans-serif;
+          text-align: end;
+          margin-top: 0.2rem;
+        }
       }
-      .date {
-        font-size: 1rem;
-        font-family: "Anton", sans-serif;
-        text-align: end;
-        margin-top: 0.2rem;
+    }
+
+    .content-right {
+      grid-area: right;
+      width: 80%;
+
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+
+      .content-top {
+        height: 45%;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          position: absolute;
+          width: 15rem;
+          opacity: 0.7;
+          height: auto;
+          border-radius: 50%;
+        }
+
+        .name {
+          color: #333;
+          font-size: 2rem;
+          font-weight: 600;
+          z-index: 1;
+          margin-top: 9rem;
+          margin-left: 8rem;
+          background: #fff;
+          border-radius: 0.3rem;
+        }
+      }
+
+      .content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        span {
+          color: #fff;
+          font-weight: 400;
+          font-size: 1.3rem;
+          font-family: "Anton", sans-serif;
+          margin: 0 0 0.5rem 0;
+
+          #name {
+            font-size: 1.6rem;
+            font-family: "Courgette", cursive;
+            cursor: pointer;
+
+            &:hover {
+              color: rgb(192, 233, 146);
+            }
+          }
+
+          span {
+            font-family: "Courgette", cursive;
+            cursor: pointer;
+
+            &:hover {
+              color: rgb(192, 233, 146);
+            }
+          }
+        }
       }
     }
   }

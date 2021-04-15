@@ -1,0 +1,95 @@
+#container-habilidades {
+  grid-area: content;
+
+  .content-habilidades {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .left {
+      width: 50%;
+    }
+
+    .right {
+      width: 50%;
+    }
+
+    li {
+      list-style: none;
+      margin-top: 2rem;
+      margin-left: 8rem;
+      width: 100%;
+
+      p {
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: rgba($color: #fff, $alpha: 1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 60%;
+
+        svg {
+          font-size: 1.4rem;
+          margin-right: 1rem;
+        }
+
+        .procentaje {
+          font-size: 1.8rem;
+          color: rgba($color: #fff, $alpha: 0.6);
+          letter-spacing: 0.1rem;
+
+          span {
+            font-size: 0.9rem;
+          }
+        }
+      }
+
+      .bar {
+        background: #353b48;
+        display: block;
+        height: 0.25rem;
+        border: 1px solid rgba($color: #000000, $alpha: 0.3);
+        border-radius: 0.1rem;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgb(192, 233, 146);
+        width: 60%;
+        margin-top: 0.5rem;
+
+        span {
+          height: 1rem;
+          float: left;
+          background: rgb(192, 233, 146);
+        }
+
+        .html {
+          width: 90%;
+        }
+        .css {
+          width: 75%;
+        }
+        .sass {
+          width: 70%;
+        }
+        .git {
+          width: 70%;
+        }
+        .reactjs {
+          width: 70%;
+        }
+        .nodejs {
+          width: 55%;
+        }
+        .javascript {
+          width: 75%;
+        }
+        .firebase {
+          width: 65%;
+        }
+      }
+    }
+  }
+}
