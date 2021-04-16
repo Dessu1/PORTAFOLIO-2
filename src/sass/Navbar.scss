@@ -1,17 +1,17 @@
 #container-navbar {
   grid-area: navbar;
-
+  background: #333;
   height: 100%;
   width: 100%;
-  background: #333;
-
   z-index: 1;
+
   .navbar {
     display: flex;
     align-items: flex-end;
     justify-content: center;
     color: #fff;
     flex-direction: column;
+    width: 100%;
 
     #hidden {
       display: none;
