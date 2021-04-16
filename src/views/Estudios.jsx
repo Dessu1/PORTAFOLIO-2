@@ -9,11 +9,6 @@ const Estudios = () => {
       <Navbar />
       <AsideMenu />
       <ContentEstudios />
-      <div className='container-chika'>
-        <a href='#'>
-          <img src='https://i.imgur.com/Wh9cqBq.gif' alt='chika-dance' />
-        </a>
-      </div>
     </div>
   );
 };

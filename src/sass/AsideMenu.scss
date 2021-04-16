@@ -8,22 +8,42 @@
     width: 100%;
 
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 
     li {
-      margin: 1rem 0;
+      margin: 1rem;
       list-style: none;
 
       a {
-        font-size: 3rem;
+        font-size: 1.5rem;
         color: rgba($color: #ffff, $alpha: 0.3);
 
         &:hover {
           color: rgba($color: rgb(192, 233, 146), $alpha: 0.6);
           border-bottom: 1px solid rgb(192, 233, 146);
         }
+      }
+    }
+  }
+}
+@media (min-width: 1201px) {
+  .nav-aside {
+    flex-direction: column;
+
+    li {
+      a {
+        font-size: 2.5rem !important;
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .nav-aside {
+    li {
+      a {
+        font-size: 3.2rem !important;
       }
     }
   }

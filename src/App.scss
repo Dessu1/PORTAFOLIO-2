@@ -24,16 +24,22 @@ body {
   background-size: contain;
 
   display: grid;
-  grid-template-columns: 1fr 8rem;
-  grid-template-rows: 4rem 1fr;
+  grid-template-columns: auto;
+  grid-template-rows: 0.1fr 1fr 0.1fr;
 
   grid-template-areas:
-    "navbar navbar"
-    "content aside-menu";
+    "navbar"
+    "content"
+    "aside-menu";
+}
 
-  .container-chika {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+@media (min-width: 1201px) {
+  #container-principal {
+    grid-template-areas:
+      "navbar navbar"
+      "content aside-menu";
+
+    grid-template-columns: 1fr 0.1fr;
+    grid-template-rows: 0.1fr 1fr;
   }
 }

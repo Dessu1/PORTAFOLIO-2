@@ -6,32 +6,107 @@
 
   z-index: 1;
   .navbar {
-    list-style: none;
-    height: 100%;
-    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    align-items: flex-end;
+    justify-content: center;
+    color: #fff;
+    flex-direction: column;
+
+    #hidden {
+      display: none;
+    }
+    #show {
+      display: flex;
+    }
+
+    ul {
+      margin-top: 3rem;
+      padding-right: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .navbar-links {
+      li {
+        list-style: none;
+
+        a {
+          text-decoration: none;
+          color: #fff;
+          padding: 1rem 0;
+          border-bottom: 1px solid transparent;
+
+          display: block;
+
+          &:hover {
+            border-bottom: 1px solid rgb(192, 233, 146);
+            color: rgb(192, 233, 146);
+          }
+        }
+      }
+    }
+
+    .toggle-button {
+      top: 0.75rem;
+      right: 1rem;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 21px;
+      background: none;
+      border: none;
+      cursor: pointer;
+
+      .bar {
+        height: 3px;
+        width: 100%;
+        background: #fff;
+        border-radius: 10px;
+      }
+
+      &:hover {
+        .bar {
+          background: rgb(192, 233, 146);
+        }
+      }
+    }
 
     .active {
       border-bottom: 1px solid rgb(192, 233, 146);
       color: rgb(192, 233, 146);
     }
+  }
+}
 
-    a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.2rem;
-      margin-left: 3.5rem;
+@media (min-width: 781px) {
+  .navbar {
+    flex-direction: row !important;
+    justify-content: flex-end !important;
+    ul {
+      margin: 0 !important;
+      display: flex !important;
+      flex-direction: row !important;
 
-      &:hover {
-        border-bottom: 1px solid rgb(192, 233, 146);
-        color: rgb(192, 233, 146);
+      li {
+        margin-left: 1rem;
+        font-size: 1.1rem;
       }
+    }
+    .toggle-button {
+      display: none !important;
+    }
+  }
+}
 
-      &:last-of-type {
-        margin-right: 1.5rem;
+@media (min-width: 1201px) {
+  .navbar {
+    ul {
+      li {
+        margin-left: 1.5rem;
+        font-size: 1.4rem;
       }
     }
   }

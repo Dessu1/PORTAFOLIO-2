@@ -16,13 +16,13 @@ const ContentHome = () => {
   return (
     <div id='container-content-home'>
       <div className='content-home'>
-        <div className='content-left'>
+        <div className='content-top'>
           <span>Brian Stiven Alvarado</span>
           <span>Front-end Developer</span>
 
           <NavLink to='/estudios'>Sobre mi</NavLink>
         </div>
-        <div className='content-right'>
+        <div className='content-bottom'>
           <h2 className='tittle'>Conocimientos</h2>
           <div className='icons'>
             <div className='row'>
